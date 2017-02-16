@@ -15,9 +15,11 @@ user = (UserBean)request.getSession().getAttribute("userLogin");
            
             <!--AdminManagement-->
             <%if (user !=null){ %>
+            <li><a href="WelcomePageAction.do?todo=welcome"><strong>หน้าแรก</strong></a></li>
              <li><a href="PageAction.do?todo=todomanagementUser"><strong>จัดการพนักงาน</strong></a></li>
               <li><a href="PageAction.do?todo=todomanagementNews"><strong>จัดการข่าว</strong></a></li>
-              <li><a href="AuthenAuthorizeAction.do?todo=logout"><strong>ออกจากระบบ</strong></a></li>
+              <li><a href="#">จัดการผังบุคลากร</a></li>
+               <li><a href="AuthenAuthorizeAction.do?todo=logout"><strong>ออกจากระบบ</strong></a></li>
             <%}else{%>
               <!--<li class="active"><a href="#"><span class="fa fa-home desktop-home"></span><span class="mobile-show">Home</span></a></li>-->
             <li><a href="WelcomePageAction.do?todo=welcome"><strong>หน้าแรก</strong></a></li>

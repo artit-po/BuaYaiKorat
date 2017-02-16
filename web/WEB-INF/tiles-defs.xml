@@ -32,11 +32,11 @@
     </definition>
     <definition name="todomanagementUser" extends="admin">
         <put name="title"  value="จัดการพนักงาน" />
-        <put name="content"   value="/pages/admin/manageUser.jsp"/>
+        <put name="content"   value="/pages/admin/user/manageUser.jsp"/>
     </definition>
     <definition name="todomanagementNews" extends="admin">
         <put name="title"  value="จัดการข่าว" />
-        <put name="content"   value="/pages/admin/manageNews.jsp"/>
+        <put name="content"   value="/pages/admin/news/manageNews.jsp"/>
     </definition>
     
     <!--END-->

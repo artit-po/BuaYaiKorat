@@ -7,6 +7,8 @@
 
 <struts-config>
     <form-beans>
+        <form-bean name="UserForm" type="com.form.UserForm"/>
+        <form-bean name="NewsForm" type="com.form.NewsForm"/>
         <form-bean name="PageForm" type="com.form.PageForm"/>
         <form-bean name="WelcomePageForm" type="com.form.WelcomePageForm"/>
         <form-bean name="AuthenAuthorizeForm" type="com.form.AuthenAuthorizeForm"/>
@@ -38,6 +40,7 @@
             <forward name="todomanagementUser" path="todomanagementUser" />
             <forward name="todomanagementNews" path="todomanagementNews" />
         </action>
+        <action name="NewsForm" parameter="todo" path="/NewsAction" scope="session" type="com.action.NewsAction"/>
         <action path="/Welcome" forward="/welcomeStruts.jsp"/>
     </action-mappings>
     
