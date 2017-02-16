@@ -19,12 +19,32 @@
         <put name="content"   value="/layout/content.jsp" />
         <put name="footer"   value="/layout/footer.jsp" />
     </definition>
+    <definition name="admin" path="/layout/baseLayout.jsp">
+        <put name="title"  value="BuaYaiKorat" />
+        <put name="header" value="/layout/header.jsp" />
+        <put name="menu"   value="/layout/menu.jsp" />
+        <!--<put name="body"   value="/layout/body.jsp" />-->
+        <put name="content"    value="/layout/content.jsp" />
+        <put name="footer"   value="/layout/footer.jsp" />
+    </definition>
     <!--For Admin-->
     <definition name="gotoLoginAdmin" path="/pages/admin/login.jsp">
     </definition>
+    <definition name="todomanagementUser" extends="admin">
+        <put name="title"  value="จัดการพนักงาน" />
+        <put name="content"   value="/pages/admin/manageUser.jsp"/>
+    </definition>
+    <definition name="todomanagementNews" extends="admin">
+        <put name="title"  value="จัดการข่าว" />
+        <put name="content"   value="/pages/admin/manageNews.jsp"/>
+    </definition>
     
     <!--END-->
-
+    <definition name="gotoContact" extends="welcome">
+        <put name="title"  value="BuaYaiKorat" />
+        <put name="content"   value="/Contact.jsp"/>
+    </definition>
+    
     <definition name="${YOUR_DEFINITION_HERE}">
     </definition>
 

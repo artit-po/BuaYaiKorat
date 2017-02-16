@@ -27,6 +27,25 @@ public class PageAction extends DispatchAction {
         
         return mapping.findForward(GOTOLOGINADMIN);
     }
-
-
+//    ไปหน้า  contact.jsp 
+  public ActionForward gotoContact(ActionMapping mapping, ActionForm form,
+            HttpServletRequest request, HttpServletResponse response)
+            throws Exception {
+        
+        return mapping.findForward("gotoContact");
+    }
+  //    ไปหน้า จัดการข้อมูลลูกค้า 
+  public ActionForward todomanagementUser(ActionMapping mapping, ActionForm form,
+            HttpServletRequest request, HttpServletResponse response)
+            throws Exception {
+        
+        return mapping.findForward("todomanagementUser");
+    }
+  //    ไปหน้า  จัดการข้อมูลข่าว
+  public ActionForward todomanagementNews(ActionMapping mapping, ActionForm form,
+            HttpServletRequest request, HttpServletResponse response)
+            throws Exception {
+        
+        return mapping.findForward("todomanagementNews");
+    }
 }

@@ -4,8 +4,12 @@
     Author     : Artit Por
 --%>
 
+<%@page import="com.bean.UserBean"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib  uri="http://struts.apache.org/tags-tiles" prefix="tiles"%>
+<%UserBean user = null;
+user = (UserBean)request.getSession().getAttribute("userLogin");
+%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -28,6 +32,32 @@
 
     </head>
     <body>
+
+
+        <%if (user != null) {%>
+
+        <a class="scrollToTop" href="#"><i class="fa fa-angle-up"></i></a>
+        <div class="container">
+            <!--header-->
+            <tiles:insert attribute="header"/>
+            <!--main-container-part-->
+            <section id="navArea">
+                <tiles:insert attribute="menu"/>
+            </section>
+            <!--body-->
+            <section id="contentSection">
+                <tiles:insert attribute="content"/>
+            </section>
+            <!--end body-->
+            <!--footer-->
+            <footer id="footer">
+                <tiles:insert attribute="footer"/>
+            </footer>
+            <!--end footer-->
+            <!--end-main-container-part-->
+        </div>
+        <%} else {
+        %>
         <a class="scrollToTop" href="#"><i class="fa fa-angle-up"></i></a>
         <div class="container">
             <!--header-->
@@ -41,7 +71,7 @@
                 <tiles:insert attribute="body"/>
             </section>
             <section id="contentSection">
-                 <tiles:insert attribute="content"/>
+                <tiles:insert attribute="content"/>
             </section>
             <!--end body-->
             <!--footer-->
@@ -51,7 +81,8 @@
             <!--end footer-->
             <!--end-main-container-part-->
 
-        </div>
+        </div>  
+        <%}%>
 
     </body>
 

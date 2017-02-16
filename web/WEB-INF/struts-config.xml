@@ -9,7 +9,7 @@
     <form-beans>
         <form-bean name="PageForm" type="com.form.PageForm"/>
         <form-bean name="WelcomePageForm" type="com.form.WelcomePageForm"/>
-    
+        <form-bean name="AuthenAuthorizeForm" type="com.form.AuthenAuthorizeForm"/>
     </form-beans>
     
     <global-exceptions>
@@ -23,9 +23,20 @@
     <action-mappings>
         <action input="/" name="WelcomePageForm" parameter="todo" path="/WelcomePageAction" scope="session" type="com.action.WelcomePageAction">
             <forward name="success" path="welcome"/>
+            
+        </action>
+              <action name="AuthenAuthorizeForm" parameter="todo" path="/AuthenAuthorizeAction" scope="session" type="com.action.AuthenAuthorizeAction">
+             <forward name="gotoLoginAdmin" path="gotoLoginAdmin"/>
+             <forward name="gotoWelcome" path="welcome"/>
+            <!--ออกจากระบบ-->
+             <forward name="welcome" path="welcome"/> 
+            <!---->
         </action>
         <action input="/" name="PageForm" parameter="todo" path="/PageAction" scope="session" type="com.action.PageAction">
             <forward name="gotoLoginAdmin" path="gotoLoginAdmin" />
+            <forward name="gotoContact" path="gotoContact" />
+            <forward name="todomanagementUser" path="todomanagementUser" />
+            <forward name="todomanagementNews" path="todomanagementNews" />
         </action>
         <action path="/Welcome" forward="/welcomeStruts.jsp"/>
     </action-mappings>
