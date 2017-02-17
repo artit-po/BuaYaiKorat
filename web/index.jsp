@@ -3,7 +3,7 @@
 
 <%--<jsp:forward page="Welcome.do"/>--%>
 <html>
-    <body>
+    <body style="margin: 0px;">
         <div class="container">
             <div class="col-md-12">
                 <a href="WelcomePageAction.do?todo=welcome">
