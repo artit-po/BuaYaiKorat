@@ -22,7 +22,7 @@ public class DBConnect {
     public Connection openNewConnection() throws Exception {
         Connection conn = null;
         Class.forName("com.mysql.jdbc.Driver");
-        String jdbc = "jdbc:mysql://localhost/db_student_checking?user=root&password=12345678";
+        String jdbc = "jdbc:mysql://localhost/db_buayai?user=root&password=12345678";
         String jdbcutf8 = "&useUnicode=true&characterEncoding=UTF-8";
         conn = DriverManager.getConnection(jdbc+jdbcutf8);
         

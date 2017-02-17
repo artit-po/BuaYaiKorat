@@ -5,6 +5,9 @@
  */
 package com.action;
 
+import com.bean.NewsBean;
+import com.dao.NewsDao;
+import java.util.ArrayList;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -45,7 +48,19 @@ public class PageAction extends DispatchAction {
   public ActionForward todomanagementNews(ActionMapping mapping, ActionForm form,
             HttpServletRequest request, HttpServletResponse response)
             throws Exception {
-        
+        ArrayList<NewsBean> listbean = new ArrayList<NewsBean>();
+        NewsDao newsdao = new NewsDao();
+        listbean = newsdao.selectAll();
+        request.getSession().setAttribute("listnews", listbean);
         return mapping.findForward("todomanagementNews");
     }
+    //ไปหน้าเพิ่มข่าว
+     public ActionForward gotoinsertnews(ActionMapping mapping, ActionForm form,
+            HttpServletRequest request, HttpServletResponse response)
+            throws Exception {
+        
+        return mapping.findForward("gotoinsertnews");
+    }
+     
+     
 }
