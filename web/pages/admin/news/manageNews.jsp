@@ -84,7 +84,7 @@
                                                             </tr>
                                                             <%}%>
                                                             <%} else {%>
-                                                        <strong style="color: red">ไม่พบข้อมูลสมาชิก</strong>        
+                                                        <strong style="color: red">ไม่พบข้อมูล</strong>        
                                                         <%}%>
                                                         </tbody>
                                                     </table>
