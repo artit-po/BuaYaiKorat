@@ -10,66 +10,75 @@ import javax.servlet.http.HttpServletRequest;
 import org.apache.struts.action.ActionErrors;
 import org.apache.struts.action.ActionMapping;
 import org.apache.struts.action.ActionMessage;
+import org.apache.struts.upload.FormFile;
 
 /**
  *
  * @author brass
  */
 public class NewsForm extends org.apache.struts.action.ActionForm {
-    
-    private String name;
-    
-    private int number;
+     private int news_id;
+    private String type_N;
+    private String name_N;
+    private FormFile file_N;
+    private String time_N;
+    private String creatby;
+    private String todo;
 
-    /**
-     * @return
-     */
-    public String getName() {
-        return name;
+    public int getNews_id() {
+        return news_id;
     }
 
-    /**
-     * @param string
-     */
-    public void setName(String string) {
-        name = string;
+    public void setNews_id(int news_id) {
+        this.news_id = news_id;
     }
 
-    /**
-     * @return
-     */
-    public int getNumber() {
-        return number;
+    public String getType_N() {
+        return type_N;
     }
 
-    /**
-     * @param i
-     */
-    public void setNumber(int i) {
-        number = i;
+    public void setType_N(String type_N) {
+        this.type_N = type_N;
     }
 
-    /**
-     *
-     */
-    public NewsForm() {
-        super();
-        // TODO Auto-generated constructor stub
+    public String getName_N() {
+        return name_N;
     }
 
-    /**
-     * This is the action called from the Struts framework.
-     *
-     * @param mapping The ActionMapping used to select this instance.
-     * @param request The HTTP Request we are processing.
-     * @return
-     */
-    public ActionErrors validate(ActionMapping mapping, HttpServletRequest request) {
-        ActionErrors errors = new ActionErrors();
-        if (getName() == null || getName().length() < 1) {
-            errors.add("name", new ActionMessage("error.name.required"));
-            // TODO: add 'error.name.required' key to your resources
-        }
-        return errors;
+    public void setName_N(String name_N) {
+        this.name_N = name_N;
     }
+
+    public FormFile getFile_N() {
+        return file_N;
+    }
+
+    public void setFile_N(FormFile file_N) {
+        this.file_N = file_N;
+    }
+
+    public String getTime_N() {
+        return time_N;
+    }
+
+    public void setTime_N(String time_N) {
+        this.time_N = time_N;
+    }
+
+    public String getCreatby() {
+        return creatby;
+    }
+
+    public void setCreatby(String creatby) {
+        this.creatby = creatby;
+    }
+
+    public String getTodo() {
+        return todo;
+    }
+
+    public void setTodo(String todo) {
+        this.todo = todo;
+    }
+   
 }

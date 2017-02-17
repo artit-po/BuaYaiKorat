@@ -38,6 +38,10 @@
         <put name="title"  value="จัดการข่าว" />
         <put name="content"   value="/pages/admin/news/manageNews.jsp"/>
     </definition>
+    <definition name="gotoinsertnews" extends="admin">
+        <put name="title"  value="จัดการข่าว" />
+        <put name="content"   value="/pages/admin/news/addnews.jsp"/>
+    </definition>
     
     <!--END-->
     <definition name="gotoContact" extends="welcome">

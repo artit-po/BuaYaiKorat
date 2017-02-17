@@ -23,7 +23,7 @@ public class NewsDao {
         DBConnect dbConnect = new DBConnect();
         Connection con = null;
         con = dbConnect.openNewConnection();
-        String sql = "insert into tbl_news values(?,?,?,?,?,?";
+        String sql = "insert into tbl_news values(?,?,?,?,?,?)";
         PreparedStatement p = null;
         int i = 0;
         try {
@@ -46,7 +46,7 @@ public class NewsDao {
         }
     }
 
-    public void deletebyuserID(int news_id) throws Exception {
+    public void deletebyID(int news_id) throws Exception {
         DBConnect dbConnect = new DBConnect();
         Connection con = null;
         con = dbConnect.openNewConnection();
