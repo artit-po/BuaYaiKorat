@@ -43,6 +43,8 @@
         </action>
        <action name="NewsForm" parameter="todo" path="/NewsbuataiAction" scope="session" type="com.action.NewsbuataiAction">
            <forward name="gotoinsertnews" path="gotoinsertnews" />
+           <forward name="gotoEdit" path="gotoEdit" />
+           
        </action>
         <action path="/Welcome" forward="/welcomeStruts.jsp"/>
     </action-mappings>

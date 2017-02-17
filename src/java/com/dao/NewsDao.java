@@ -139,7 +139,7 @@ public class NewsDao {
     }
     
      
-      public NewsBean selectByUserId(int news_id) throws Exception {
+      public NewsBean selectById(int news_id) throws Exception {
         NewsBean newsBean = null;
         ResultSet rs = null;
         DBConnect dbConnect = new DBConnect();

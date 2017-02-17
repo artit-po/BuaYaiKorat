@@ -90,4 +90,51 @@ public class NewsbuataiAction extends DispatchAction {
         return mapping.findForward("todomanagementNews");
        
     }
+     
+     
+       public ActionForward editnews(ActionMapping mapping, ActionForm form,
+            HttpServletRequest request, HttpServletResponse response)
+            throws Exception {
+         NewsForm newsform = (NewsForm)form;
+         NewsDao dao = new NewsDao();
+         NewsBean bean = new NewsBean();
+         String msg = null;
+         UserBean userbean = new UserBean();
+         UserDao userdao = new UserDao();
+         userbean =  (UserBean) request.getSession().getAttribute("userLogin");
+         bean.setType_N(newsform.getType_N());
+         bean.setName_N(newsform.getName_N());
+         bean.setTime_N(newsform.getTime_N());
+         bean.setCreatby(userbean.getFname());
+         FileUploadUtil upload = new FileUploadUtil();
+         FileOutputStream outputStream = null;
+        FormFile file = null;
+        String file1 = newsform.getFile_N().getFileName();
+        if (file1.equals("")) {
+            bean.setFile_N(bean.getFile_N());
+        } else {
+            bean.setFile_N(upload.upload(newsform.getFile_N()));
+        }
+        try {
+            dao.update(bean);
+            System.out.println("สำเร็จ");
+            msg = "ok";
+        } catch (Exception ex) {
+            System.out.println("ลงทะเบียนไม่สำเร็จ");
+            ex.printStackTrace();
+            msg = "no";
+        }
+        request.getSession().setAttribute("msg", msg);
+        return mapping.findForward("gotoinsertnews");
+    }
+       public ActionForward gotoEdit(ActionMapping mapping, ActionForm form,
+            HttpServletRequest request, HttpServletResponse response)
+            throws Exception {
+         NewsForm newsform = (NewsForm)form;
+         NewsDao dao = new NewsDao();
+         NewsBean bean = new NewsBean();
+         bean = dao.selectById(newsform.getNews_id());
+        request.getSession().setAttribute("editnews", bean);
+        return mapping.findForward("gotoEdit");
+    }
 }

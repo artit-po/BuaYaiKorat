@@ -79,7 +79,7 @@
                                                                 <td ><%=bean.getType_N()%></td>
                                                                 <td><%=bean.getName_N()%></td>
                                                                 <td class="sorting_1"><%=bean.getTime_N()%></td>
-                                                                <td><button class="btn btn-sm btn-danger" type="button" value="ลบ" onclick="callActionGotoDelete(<%=bean.getNews_id()%>)"><i class="fa fa-close"></i></button>
+                                                                <td><button class="btn btn-sm btn-danger" type="submit" value="ลบ" onclick="callActionGotoDelete(<%=bean.getNews_id()%>)"><i class="fa fa-close"></i></button>
                                                                     <button class="btn btn-sm btn-success" type="submit" value="แก้ไข" onclick="callActionGotoEdit(<%=bean.getNews_id()%>)"><i class="glyphicon glyphicon-edit"></i></button></td>
                                                             </tr>
                                                             <%}%>
