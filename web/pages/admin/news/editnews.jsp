@@ -70,7 +70,7 @@
                                     <div class="col-md-6 inputGroupContainer">
                                         <div class="input-group">
                                             <span class="input-group-addon"><i class="glyphicon glyphicon-time"></i></span>
-                                            <input value="<%=bean.getTime_N()%>"  name="time_N" placeholder="วันที่ลงข่าว" class="form-control"  type="date"  required="">
+                                            <input value="<%=bean.getTime_N()%>"  name="time_N" class="form-control"  type="date"  required="">
                                         </div>
                                     </div>
                                 </div>
@@ -108,7 +108,7 @@
                         type: "success"
                     },
                             function () {
-//                                    window.location.href = 'PageAction.do?todo=gotoPageAdminManagermentclub';
+                                    window.location.href = 'PageAction.do?todo=todomanagementNews';
                             });
                 });
             }
@@ -124,7 +124,7 @@
                     type: "error"
                 },
                         function () {
-//                                window.location.href = 'PageAction.do?todo=gotoinsertclub';
+//                                window.location.href = '';
                         });
             }
             ;

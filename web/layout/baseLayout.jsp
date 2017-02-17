@@ -29,7 +29,7 @@ user = (UserBean)request.getSession().getAttribute("userLogin");
         <link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/assets/css/jquery.fancybox.css">
         <link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/assets/css/theme.css">
         <link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/assets/css/style.css">
-
+<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/assets/css/sweetalert.css">
     </head>
     <body>
 
@@ -94,6 +94,7 @@ user = (UserBean)request.getSession().getAttribute("userLogin");
     <script src="<%=request.getContextPath()%>/assets/js/jquery.newsTicker.min.js"></script> 
     <script src="<%=request.getContextPath()%>/assets/js/jquery.fancybox.pack.js"></script> 
     <script src="<%=request.getContextPath()%>/assets/js/custom.js"></script>
+     <script src="<%=request.getContextPath()%>/assets/js/sweetalert.min.js"></script>
 </html>
 
 
